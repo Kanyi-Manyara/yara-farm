@@ -1,0 +1,386 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1, h2, h3 {
+    color: #2c3e50;
+  }
+  
+  p {
+    color: #34495e;
+  }
+  
+  /* Splash Screen */
+  #splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 1000;
+  }
+  
+  .splash-content {
+    text-align: center;
+  }
+  
+  /* Hero Section */
+  /* #hero {
+    background: url('assets/images/hero.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  
+  .cta-button {
+    background: #e67e22;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  } */
+  
+  /* Hero Section */
+#hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the video behind the content */
+  }
+  
+  #hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire container */
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1; /* Place the content above the video */
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    background: #e67e22;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background: #d35400;
+  }
+
+/* Toggle Button */
+#nav-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above the side nav */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #nav-toggle i {
+    font-size: 1.2rem;
+  }
+  
+  /* Side Navigation */
+  #side-nav {
+    position: fixed;
+    top: 50%;
+    right: -100px; /* Initially hidden off-screen */
+    transform: translateY(-50%);
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 10px;
+    transition: right 0.3s ease;
+  }
+  
+  #side-nav.active {
+    right: 20px; /* Visible on-screen */
+  }
+  
+  #side-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #side-nav ul li {
+    margin: 15px 0;
+  }
+  
+  #side-nav ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 1rem;
+    display: block;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  #side-nav ul li a:hover {
+    background: #27ae60;
+    color: white;
+  }
+  
+  #side-nav ul li a.active {
+    background: #27ae60;
+    color: white;
+  }
+
+  /* About Section */
+  #about {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  /* Products Section */
+  #products {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .product-card {
+    width: 30%;
+    margin: 10px;
+  }
+  
+  /* Gallery Section
+  #gallery {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .gallery-grid img {
+    width: 100%;
+    height: auto;
+  } */
+  
+/* Gallery Section */
+#gallery {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust minmax for column width */
+    gap: 15px; /* Space between images */
+    padding: 0 20px;
+  }
+  
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px; /* Smooth curved edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the container without distortion */
+    display: block;
+    border-radius: 15px; /* Match the container's curved edges */
+  }
+
+  /* Testimonials Section */
+#testimonials {
+    padding: 50px 20px;
+    text-align: center;
+    background: #f9f9f9;
+  }
+  
+  #testimonials h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #2c3e50;
+  }
+  
+  .testimonial-slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .testimonial-card {
+    flex: 0 0 100%;
+    transition: transform 0.5s ease;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .testimonial-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .testimonial-content p {
+    font-size: 1.1rem;
+    color: #34495e;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+  }
+  
+  .testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .author-details h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #2c3e50;
+  }
+  
+  .author-details p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+  }
+  
+  .slider-controls {
+    margin-top: 20px;
+  }
+  
+  .slider-controls button {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background 0.3s ease;
+  }
+  
+  .slider-controls button:hover {
+    background: #219653;
+  }
+  
+  .slider-controls button i {
+    font-size: 1.2rem;
+  }
+  
+  /* Contact Section */
+  #contact {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form input, form textarea {
+    width: 80%;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  form button {
+    background: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  /* Footer */
+  footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .social-links a {
+    color: white;
+    margin: 0 10px;
+  }

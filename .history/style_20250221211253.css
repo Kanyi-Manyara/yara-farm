@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1, h2, h3 {
+    color: #2c3e50;
+  }
+  
+  p {
+    color: #34495e;
+  }
+  
+  /* Splash Screen */
+  #splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #27ae60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 1000;
+  }
+  
+  .splash-content {
+    text-align: center;
+  }
+  
+  /* Hero Section */
+  #hero {
+    background: url('assets/images/hero.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  
+  .cta-button {
+    background: #e67e22;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  /* About Section */
+  #about {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  /* Products Section */
+  #products {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .product-card {
+    width: 30%;
+    margin: 10px;
+  }
+  
+  Gallery Section
+  #gallery {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .gallery-grid img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Testimonials Section */
+  #testimonials {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .testimonial-slider {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* Contact Section */
+  #contact {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form input, form textarea {
+    width: 80%;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  form button {
+    background: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  /* Footer */
+  footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .social-links a {
+    color: white;
+    margin: 0 10px;
+  }
