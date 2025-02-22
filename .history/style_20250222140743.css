@@ -227,14 +227,14 @@ body {
     color: black; /* Grey font color */
     padding: 10px 20px;
     text-decoration: none;
-    border: 1px solid black; /* White outline for button */
+    border: 1px solid ; /* White outline for button */
     border-radius: 5px;
     font-size: 1.0rem;
     transition: background 0.3s ease, color 0.3s ease;
   }
   
   .learn-more:hover {
-    background: grey;
+    background: black;
     color: white;
   }
   /* Gallery Section

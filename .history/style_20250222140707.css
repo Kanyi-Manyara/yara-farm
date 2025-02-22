@@ -234,7 +234,7 @@ body {
   }
   
   .learn-more:hover {
-    background: grey;
+    background: black;
     color: white;
   }
   /* Gallery Section
@@ -560,7 +560,7 @@ header {
   .back-button {
     display: inline-block;
     margin: 20px;
-    color: grey;
+    color: #27ae60;
     text-decoration: none;
     font-size: 1rem;
   }

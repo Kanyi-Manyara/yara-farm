@@ -206,7 +206,7 @@ body {
   
   .product-card i {
     font-size: 3rem;
-    color: grey;
+    color: #27ae60;
     margin-bottom: 20px;
   }
   
@@ -225,7 +225,7 @@ body {
   .learn-more {
     background: transparent; /* Transparent button background */
     color: black; /* Grey font color */
-    padding: 10px 20px;
+    padding: 20px 20px;
     text-decoration: none;
     border: 1px solid black; /* White outline for button */
     border-radius: 5px;
@@ -234,7 +234,7 @@ body {
   }
   
   .learn-more:hover {
-    background: grey;
+    background: black;
     color: white;
   }
   /* Gallery Section
@@ -446,7 +446,7 @@ body {
   }
   
   .contact-info i {
-    color: white;
+    color: #27ae60;
   }
   
   /* Right Side: Google Map */
@@ -544,7 +544,7 @@ header {
   }
   
   .cta-button {
-    background: grey;
+    background: #27ae60;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -554,13 +554,13 @@ header {
   }
   
   .cta-button:hover {
-    background: darkgray;
+    background: #219653;
   }
   
   .back-button {
     display: inline-block;
     margin: 20px;
-    color: grey;
+    color: #27ae60;
     text-decoration: none;
     font-size: 1rem;
   }
