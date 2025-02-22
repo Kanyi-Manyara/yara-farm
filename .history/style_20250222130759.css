@@ -147,19 +147,19 @@ body {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     width: 20px;
-    height: 20px;
+    height: 40px;
     text-align: center;
-    line-height: 20px;
+    line-height: 40px;
     transition: background 0.3s ease, color 0.3s ease;
   }
   
   #side-nav ul li a:hover {
-    background: grey;
+    background: #27ae60;
     color: white;
   }
   
   #side-nav ul li a.active {
-    background: grey;
+    background: #27ae60;
     color: white;
   }
 

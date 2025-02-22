@@ -149,7 +149,7 @@ body {
     width: 20px;
     height: 20px;
     text-align: center;
-    line-height: 20px;
+    line-height: 40px;
     transition: background 0.3s ease, color 0.3s ease;
   }
   
@@ -159,7 +159,7 @@ body {
   }
   
   #side-nav ul li a.active {
-    background: grey;
+    background: #27ae60;
     color: white;
   }
 
