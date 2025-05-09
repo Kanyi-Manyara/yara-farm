@@ -630,7 +630,7 @@ header {
 }
 
 /* Responsive layout for tablets and smaller devices */
-@media (max-width: 900px) {
+@media (max-width: px) {
   .gallery-grid {
     column-count: 2; /* All smaller devices: exactly 2 columns */
   }

@@ -600,13 +600,14 @@ header {
   margin-bottom: 15px;
   overflow: hidden;
   border-radius: 15px; /* Smooth curved edges */
-  box-shadow: none; /* Remove the card shadow */
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   break-inside: avoid; /* Prevents items from breaking across columns */
 }
 
 .gallery-item:hover {
   transform: scale(1.02); /* Slight zoom on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .gallery-item img {
@@ -615,23 +616,16 @@ header {
   border-radius: 15px; /* Match the container's curved edges */
 }
 
-/* Responsive layout for wide screens (desktops) */
-@media (min-width: 1201px) {
+/* Responsive layout for tablets */
+@media (max-width: 768px) {
   .gallery-grid {
-    column-count: 4; /* Wide screens: 4 columns */
+    column-count: 3; /* Tablet view: 3 columns */
   }
 }
 
-/* Responsive layout for medium-sized screens (laptops) */
-@media (max-width: 1200px) {
+/* Responsive layout for mobile - Pinterest style with 2 columns */
+@media (max-width: 576px) {
   .gallery-grid {
-    column-count: 3; /* Medium screens: 3 columns */
-  }
-}
-
-/* Responsive layout for tablets and smaller devices */
-@media (max-width: 900px) {
-  .gallery-grid {
-    column-count: 2; /* All smaller devices: exactly 2 columns */
+    column-count: 2; /* Mobile view: exactly 2 columns like Pinterest */
   }
 }

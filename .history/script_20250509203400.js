@@ -225,9 +225,6 @@ carouselTrack.addEventListener('mouseleave', () => {
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize gallery items after page load
   initGallery();
-  
-  // Handle window resize for responsive adjustments
-  window.addEventListener('resize', adjustGallery);
 });
 
 function initGallery() {
@@ -246,28 +243,20 @@ function initGallery() {
     }
   });
   
-  // Apply varied heights to images for Pinterest-like effect
-  applyVariedHeights();
+  // Apply random heights to images for Pinterest-like variation
+  applyRandomHeights();
 }
 
-function applyVariedHeights() {
+function applyRandomHeights() {
   const galleryItems = document.querySelectorAll('.gallery-item img');
-  const heights = [180, 220, 250, 280, 320, 350]; // More natural variation
   
-  galleryItems.forEach((img, index) => {
-    // Cycle through heights array for variety
-    const heightIndex = index % heights.length;
-    const height = heights[heightIndex];
-    
-    // Set a specific height for each image from our array of options
-    img.style.height = `${height}px`;
+  galleryItems.forEach(img => {
+    // Set a random height between 200px and 400px for variety
+    // This simulates the Pinterest-style varied image heights
+    const randomHeight = Math.floor(Math.random() * (400 - 200) + 200);
+    img.style.height = `${randomHeight}px`;
     img.style.objectFit = 'cover';
   });
-}
-
-function adjustGallery() {
-  // Reapply heights on window resize
-  applyVariedHeights();
 }
 
 function handleLightbox(e) {
@@ -303,8 +292,7 @@ function handleLightbox(e) {
   lightbox.addEventListener('click', () => {
     document.body.removeChild(lightbox);
   });
-  lightbox.addEventListener('touchend', (e) => {
-    e.preventDefault();
+  lightbox.addEventListener('touchend', () => {
     document.body.removeChild(lightbox);
   });
 }
